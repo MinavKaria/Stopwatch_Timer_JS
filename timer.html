@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="Timer-container flex flex-col justify-center items-center "> 
+        <div>
+            <h1 class="text-5xl">Timer</h1>
+        </div>
+
+        <div class=" set-area flex my-5 h-15">
+        <label for="hourin">Hours:</label>
+        <input type="number" name="hours" id="hourin" class="hour-in block border border-gray-900 w-12 ml-2 px-2" placeholder="hour" value="0">
+
+        <label for="minin" class="ml-2">Minutes:</label>
+        <input type="number" name="minutes" id="minin" placeholder="Minutes" class="min-in block border border-gray-900 w-11 ml-2 px-2" value="0">
+
+        <label for="secin" class="ml-2">Seconds:</label>
+       <input type="number" name="seconds" id="seconds" placeholder="Seconds" class="sec-in block border px-2 border-gray-900 w-12 ml-2 " value="0">
+
+       <div>
+            <button class= "data-input bg-neutral-50 border-zinc-900 border ml-10 pr-2 pl-2 rounded-md hover:bg-red-900 hover:text-white" >Set</button>
+       </div>
+      
+        </div>
+
+
+
+        <div class="Timer-display m-5 font-mono text-5xl">
+            <h1 class="display">  <span class="hours">00</span>:<span class="minutes">00</span>:<span class="seconds">00</span>:<span class="milliseconds">00</span></h1>
+        </div>
+
+        <div class="Stopwatch-button">
+            <button type="button" class="start bg-sky-500 border p-2 rounded-lg m-3   hover:text-white">▶️</button>
+            <button type="button" class="stop  bg-sky-500 border p-2 rounded-lg  hover:bg-black hover:text-white">⏸️</button>
+            <button type="reset" class="reset  border-slate-950 border p-2 rounded-lg m-3 hover:text-white">Reset</button>
+        </div>
+            
+        <div>
+            <a href="index.html"><button class="text-blue-600">Stopwatch -></button></a>
+        </div>
+
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="style2.js"></script>
+</html>
