@@ -15,7 +15,7 @@ var min=min<10 ? "0"+min : min;
 var sec=sec<10 ? "0"+sec : sec;
 var milli=milli<10 ? "0"+milli : milli;
 
-
+var audio = new Audio('Alarm.mp3');
 var counter=false;
 
 inputbutton.addEventListener('click', setTimer);
@@ -27,6 +27,11 @@ stopbutton.style.display="none";
 
 function start()
 {
+    if(hourdigit.innerHTML=="00" && mindigit.innerHTML=="00" && secdigit.innerHTML=="00" && millidigit.innerHTML=="00")
+    {
+        alert("Please Enter a Timer");
+        return;
+    }
     counter=true;
     startbutton.style.display="none";
     stopbutton.style.display="inline-block";
@@ -45,7 +50,7 @@ function setTimer()
     hour=document.querySelector('.hour-in').value;
     min=document.querySelector('.min-in').value;
     sec=document.querySelector('.sec-in').value;
-    if(hour==0 && min==0 && sec==0)
+    if((hour<0 || min<0 || sec<0) || (hour==0 && min==0 && sec==0) || (hour=="" || min=="" || sec==""))
     {
         alert("Please enter a valid time");
         return;
@@ -56,7 +61,6 @@ function setTimer()
         hour=document.querySelector('.hour-in').value;
         min=document.querySelector('.min-in').value;
         sec=document.querySelector('.sec-in').value;
-        document.querySelector('.set-area').style.display="none";
         resetTimer();
     }
     
@@ -71,7 +75,7 @@ function timerStart()
         if(hour==0 && min==0 && sec==0 && milli==0)
         {
             title.innerHTML="Timer Finished";
-            var audio = new Audio('Alarm.mp3');
+            
             audio.play();
             counter = false;
         }
@@ -118,6 +122,8 @@ function timerStart()
 function resetTimer()
 {
     counter=false;
+    title.innerHTML="Timer";
+    audio.pause();
     startbutton.style.display="inline-block";
     stopbutton.style.display="none";
     hour=document.querySelector('.hour-in').value;

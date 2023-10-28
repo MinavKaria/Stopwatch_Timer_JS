@@ -8,12 +8,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="Timer-container flex flex-col justify-center items-center "> 
+    <div class="Timer-container flex flex-col justify-center items-center
+     "> 
         <div>
-            <h1 class="text-5xl">Timer</h1>
+            <h1 class="text-5xl font-extralight">Timer</h1>
         </div>
 
-        <div class=" set-area flex my-5 h-15">
+        <div class=" set-area flex my-5 h-15 text-sm md:text-xs">
         <label for="hourin">Hours:</label>
         <input type="number" name="hours" id="hourin" class="hour-in block border border-gray-900 w-12 ml-2 px-2" placeholder="hour" value="0">
 
@@ -24,7 +25,7 @@
        <input type="number" name="seconds" id="seconds" placeholder="Seconds" class="sec-in block border px-2 border-gray-900 w-12 ml-2 " value="0">
 
        <div>
-            <button class= "data-input bg-neutral-50 border-zinc-900 border ml-10 pr-2 pl-2 rounded-md hover:bg-red-900 hover:text-white" >Set</button>
+            <button class= "data-input bg-neutral-50 border-zinc-900 border ml-5 pr-2 pl-2 rounded-md hover:bg-red-900 hover:text-white" >Set</button>
        </div>
       
         </div>
@@ -37,8 +38,8 @@
 
         <div class="Stopwatch-button">
             <button type="button" class="start bg-sky-500 border p-2 rounded-lg m-3   hover:text-white">▶️</button>
-            <button type="button" class="stop  bg-sky-500 border p-2 rounded-lg  hover:bg-black hover:text-white">⏸️</button>
-            <button type="reset" class="reset  border-slate-950 border p-2 rounded-lg m-3 hover:text-white">Reset</button>
+            <button type="button" class="stop  bg-sky-500 border p-2 rounded-lg m-3  hover:text-white">⏸️</button>
+            <button type="reset" class="reset  border-slate-950 border p-2 rounded-lg m-3 hover:bg-black hover:text-white">Reset</button>
         </div>
             
         <div>

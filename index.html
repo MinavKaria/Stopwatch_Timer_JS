@@ -5,27 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StopWatch</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
 </head>
 <body>
-    <div class="Stopwatch-container d-flex justify-content-center align-items-center flex-md-column align-content-center">
-        <div>
-            <h1>StopWatch</h1>
+    <div class="flex-col text-xl w-50 text-center">
+        <div class="text-3xl font-extralight m-3 pb-5">
+            <h1>Stopwatch</h1>
         </div>
 
-        <div class="Stopwatch- m-5">
+        <div class="Stopwatch- m-5 font-mono text-5xl ">
             <h1 class="display">  <span class="hours">00</span>:<span class="minutes">00</span>:<span class="seconds">00</span>:<span class="milliseconds">00</span></h1>
         </div>
 
-        <div class="Stopwatch-button">
-            <button type="button" class="start btn bg-warning">Start</button>
-            <button type="button" class="stop btn bg-danger  text-white">Stop</button>
-            <button type="reset" class="reset btn bg-primary text-white">Reset</button>
+        <div class="Stopwatch-button flex justify-center gap-3 p-5">
+            <button type="button" class="start bg-white border border-slate-950 p-1 rounded-md hover:bg-black hover:text-white">Start</button>
+            <button type="button" class="stop bg-white border border-slate-950 p-1 rounded-md hover:bg-black hover:text-white">Stop</button>
+            <button type="reset" class="reset bg-white border border-slate-950 p-1 rounded-md hover:bg-black hover:text-white">Reset</button>
         </div>
         <br>
         <br>
 
-        <div>
-            <a href="timer.html"><button>Timer</button></a>
+        <div class=''>
+            <a href="timer.html" class="text-blue-500">Timer -></a>
         </div>
 
     </div>
